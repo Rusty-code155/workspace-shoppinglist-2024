@@ -53,7 +53,15 @@
       const auth = firebaseApp.auth();
 
     // Save the list to database
-
+    data ={
+      name:"Turner",
+      date:"12/2/2024",
+      time:"12:17 PM",
+      location: "USCA"
+    }
+    db.collection('test').add({
+      name:"Turner"
+    });
 
   </script>
 
