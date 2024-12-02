@@ -52,6 +52,15 @@
       const auth = firebaseApp.auth();
 
     // Save the list to database
+    $('#save').click(function(){
+      $(this).text("saving............")
+      $('li').each(function(){
+        //add each item!!
+        var value = $(this).text();
+        console.log("the item is"+value);
+        db.collection("grocerylist").add({item: value});
+      });
+    });
     data ={
       name:"Turner",
       date:"12/2/2024",
